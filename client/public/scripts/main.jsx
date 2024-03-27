@@ -1,8 +1,9 @@
+"use strict";
 //===============================================
 // On load
 //===============================================
 // First check for username
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
     if (localStorage.getItem("savedUsername")) {
         username = JSON.parse(localStorage.getItem("savedUsername"));
         getUserInfo();
@@ -17,14 +18,14 @@ window.addEventListener("load", () => {
 //===============================================
 function newUsername() {
     hideError();
-    let usernameElement = document.getElementById("username");
+    var usernameElement = document.getElementById("username");
     if (usernameElement) {
         username = usernameElement.value;
         localStorage.setItem("savedUsername", JSON.stringify(username));
         getUserInfo();
     }
 }
-const usernameInput = document.getElementById("username");
+var usernameInput = document.getElementById("username");
 if (usernameInput) {
     usernameInput.addEventListener("keydown", function (event) {
         if (event.key == "Enter") {
@@ -36,7 +37,7 @@ if (usernameInput) {
 // Show user errors
 //===============================================
 function showError(errorTitle, errorText, color) {
-    let errorBox = document.querySelector(".error-box");
+    var errorBox = document.querySelector(".error-box");
     if (errorBox) {
         errorBox.classList.remove("hidden");
         errorBox.classList.remove("bg-green-800");
@@ -44,8 +45,8 @@ function showError(errorTitle, errorText, color) {
         errorBox.classList.remove("bg-blue-800");
         errorBox.classList.add(color);
     }
-    let errorTitleElement = document.querySelector(".error-title");
-    let errorTextElement = document.querySelector(".error-text");
+    var errorTitleElement = document.querySelector(".error-title");
+    var errorTextElement = document.querySelector(".error-text");
     if (errorTitleElement) {
         errorTitleElement.innerHTML = errorTitle;
     }
@@ -54,7 +55,7 @@ function showError(errorTitle, errorText, color) {
     }
 }
 function hideError() {
-    let errorBox = document.querySelector(".error-box");
+    var errorBox = document.querySelector(".error-box");
     if (errorBox) {
         errorBox.classList.add("hidden");
     }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="%PUBLIC_URL%/images/logo.ico" />
+   <meta name="theme-color" content="#ef4444" />
+   <meta name="CodeFetch" content="Your developer profile, reprofiled.">
+   <!-- web app manifest - https://developers.google.com/web/fundamentals/web-app-manifest/ -->
+   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+   <title>CodeFetch</title>
+   <!--
+     Notice the use of %PUBLIC_URL% in the tags above.
+     It will be replaced with the URL of the `public` folder during the build.
+     Only files inside the `public` folder can be referenced from the HTML.
+
+     Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+     work correctly both with client-side routing and a non-root public URL.
+     Learn how to configure a non-root public URL by running `npm run build`.
+   -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="flex justify-center items-center h-[100vh] bg-zinc-50 dark:bg-zinc-900 dark:text-white lg:px-[20vw] sm:px-0">
+   <noscript>It's 2024. Why don't you have JavaScript enabled?</noscript>
+
+   <!-- Page Card -->
+   <div
+      class="block relative min-w-[50vw] p-2 my-4 shadow-2xl bg-zinc-200 dark:bg-zinc-800 border-[1px] border-zinc-300 dark:border-zinc-700 border-t-zinc-100 dark:border-t-zinc-600 rounded-lg">
+      <!-- Profile Link -->
+      <a href="profile.html">
+         <div
+            class="inline-flex justify-center absolute right-2 transition-all p-2 shadow-lg bg-zinc-200 dark:bg-zinc-800 border-[1px] border-zinc-300 dark:border-zinc-700 border-t-zinc-100 dark:border-t-zinc-600 rounded-md dark:text-white">
+            <span class="material-symbols-rounded text-public mr-2">account_circle</span>
+            <p>My Profile</p>
+         </div>
+      </a>
+      <!-- body -->
+      <div class="grid gap-10 px-4 py-24" style="grid-template-columns: 312px auto;">
+         <img class="m-6 w-[300px] shadow-2xl border-[1px] border-zinc-700 border-t-zinc-600 rounded-full"
+            src="images/logo.svg" alt="logo">
+         <div class="my-auto">
+            <h1 class="text-4xl"> CodeFetch </h1>
+            <h4 class="text-blue-500 dark:text-blue-300">Where people can find you</h4>
+            <p>As developers, we have accounts across the web that each showcase only a part of our amazing work. Now,
+               with CodeFetch, you can show off all your projects and achievements in one place!</p>
+            <!-- I should really remove this -->
+            <div id="root" class="hidden"></div>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
