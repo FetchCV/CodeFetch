@@ -89,6 +89,7 @@ function getUserInfo() {
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 7, , 8]);
+                    console.log(header);
                     return [4 /*yield*/, fetch("https://api.github.com/users/".concat(username), header)];
                 case 2:
                     response = _a.sent();
